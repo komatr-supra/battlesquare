@@ -8,13 +8,16 @@
 #include "GameManager.h"
 #include "WindowManager.h"
 
+#include "AudioManager.h"
+
 int main()
 {
     InitWindow(WindowManager::GetWidth(), WindowManager::GetHeight(), "GAME");
     SetTargetFPS(60);
-
+    InitAudioDevice();
+    Sound testMusic = LoadSound("Audio/music.mp3");
+    AudioManager::PlayMusic(testMusic);
     GameManager gameManager;
-    
     while (!WindowShouldClose())
     {
         //game exit

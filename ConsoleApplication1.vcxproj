@@ -133,6 +133,7 @@
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="MenuManager.cpp" />
+    <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="WindowManager.cpp" />
     <ClCompile Include="SettingsMenu.cpp" />
   </ItemGroup>
@@ -144,8 +145,12 @@
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MenuManager.h" />
     <ClInclude Include="Menus.h" />
+    <ClInclude Include="AudioManager.h" />
     <ClInclude Include="WindowManager.h" />
     <ClInclude Include="SettingsMenu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Audio\music.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

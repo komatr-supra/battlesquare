@@ -11,5 +11,6 @@ private:
 	//buttons
 	int width{ 400 };
 	int height{ 80 };
+
 };
 

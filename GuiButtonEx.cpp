@@ -2,15 +2,15 @@
 
 bool GuiButtonEx(Rectangle rect, const char* text, ButtonAli hAlignment)
 {
-	Vector2 textSize = MeasureTextEx(GuiGetFont(), text, GuiGetStyle(DEFAULT, TEXT_SIZE), 1);
+	Vector2 textSize = MeasureTextEx(GuiGetFont(), text, GuiGetStyle(FONT_DEFAULT, TEXT_SIZE), GuiGetStyle(FONT_DEFAULT, TEXT_SPACING));
 
 	switch (hAlignment)
 	{
 	case ButtonAli::LEFT:
 		break;
-	case ButtonAli::CENTER: rect.x += (rect.width - textSize.x) / 2;
+	case ButtonAli::CENTER: rect.x -= rect.width / 2;
 		break;
-	case ButtonAli::RIGHT:rect.x += rect.width - textSize.x;
+	case ButtonAli::RIGHT:rect.x -= rect.width;
 		break;
 	default:
 		break;

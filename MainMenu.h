@@ -13,6 +13,6 @@ private:
 	//buttons
 	int width{ 400 };
 	int height{ 80 };
-	std::function<void()> gameManage_closeGame;
+	std::function<void()> gameManager_closeGame;
 };
 
