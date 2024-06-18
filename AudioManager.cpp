@@ -13,6 +13,7 @@ void AudioManager::SetMusicVolume(float volume)
 
 void AudioManager::SetSfxVolume(float volume)
 {
+	sfxVolume = volume;
 }
 
 
@@ -29,4 +30,10 @@ void AudioManager::PlayMusic(Sound sound)
 	::SetSoundVolume(sound, AudioManager::musicVolume);
 	PlaySound(sound);
 	currentMusic = sound;
+}
+
+void AudioManager::PlaySFX(Sound sound)
+{
+	::SetSoundVolume(sound, AudioManager::sfxVolume);
+	PlaySound(sound);
 }

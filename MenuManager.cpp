@@ -1,6 +1,7 @@
 #include "MenuManager.h"
 #include "raygui.h"
 #include "raylib.h"
+#include "AudioManager.h"
 
 MenuManager::MenuManager(std::function<void()> setClose)
 	
@@ -10,16 +11,19 @@ MenuManager::MenuManager(std::function<void()> setClose)
 	mainMenu = new MainMenu{ "MAIN MENU", menuChange, setClose};
 	settings = new SettingsMenu{ "SETTINGS", menuChange};
 	currentMenu = mainMenu;
+	buttonClick = LoadSound("Audio/click1.ogg");
 }
 
 MenuManager::~MenuManager()
 {
 	delete mainMenu;
 	delete settings;
+	UnloadSound(buttonClick);
 }
 //change memu decider
 void MenuManager::ChangeMenu(Menus newMenu)
 {
+	AudioManager::PlaySFX(buttonClick);
 	if (currentScene == newMenu || newMenu == Menus::NO_CHANGE) return;
 	
 	switch (newMenu)

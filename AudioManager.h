@@ -12,6 +12,7 @@ public:
 	static float GetSfxVolume();
 
 	static void PlayMusic(Sound sound);
+	static void PlaySFX(Sound sound);
 private:
 	static Sound currentMusic;
 	static float musicVolume;

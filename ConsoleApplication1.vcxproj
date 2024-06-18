@@ -152,6 +152,9 @@
   <ItemGroup>
     <Media Include="Audio\music.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\click1.ogg" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

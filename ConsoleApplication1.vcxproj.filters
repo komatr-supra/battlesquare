@@ -95,4 +95,9 @@
       <Filter>Resource Files</Filter>
     </Media>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Audio\click1.ogg">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

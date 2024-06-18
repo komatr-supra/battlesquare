@@ -17,6 +17,7 @@ private:
 	MainMenu *mainMenu;
 	SettingsMenu *settings;
 	Menus currentScene{Menus::MAINMENU};
+	Sound buttonClick;
 };
 
 

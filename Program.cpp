@@ -22,15 +22,14 @@ int main()
     {
         //game exit
         if (gameManager.IsExitRequired()) break;
-
         BeginDrawing();
-        ClearBackground(GRAY);
+        ClearBackground(DARKGREEN);
 
         gameManager.Update(GetFrameTime());
 
         EndDrawing();
     }
-
+    UnloadSound(testMusic);
     
     return 0;
 }
