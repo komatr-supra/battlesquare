@@ -76,6 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>External;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -90,6 +91,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>External;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -104,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>External;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -118,6 +121,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>External;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,25 +131,43 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssetManager.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameStateMachine.cpp" />
     <ClCompile Include="GuiButtonEx.cpp" />
+    <ClCompile Include="InGameState.cpp" />
+    <ClCompile Include="MainMenuState.cpp" />
+    <ClCompile Include="MapSystem.cpp" />
     <ClCompile Include="MenuSceneBase.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="MenuManager.cpp" />
     <ClCompile Include="AudioManager.cpp" />
+    <ClCompile Include="SelectStageMenu.cpp" />
+    <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="WindowManager.cpp" />
     <ClCompile Include="SettingsMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssetManager.h" />
+    <ClInclude Include="External\json.hpp" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameStateMachine.h" />
+    <ClInclude Include="Grid.h" />
     <ClInclude Include="GuiButtonEx.h" />
     <ClInclude Include="IGameObject.h" />
+    <ClInclude Include="InGameState.h" />
+    <ClInclude Include="IState.h" />
+    <ClInclude Include="MainMenuState.h" />
+    <ClInclude Include="MapSystem.h" />
     <ClInclude Include="MenuSceneBase.h" />
     <ClInclude Include="MainMenu.h" />
     <ClInclude Include="MenuManager.h" />
     <ClInclude Include="Menus.h" />
     <ClInclude Include="AudioManager.h" />
+    <ClInclude Include="SelectStageMenu.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="Transition.h" />
     <ClInclude Include="WindowManager.h" />
     <ClInclude Include="SettingsMenu.h" />
   </ItemGroup>

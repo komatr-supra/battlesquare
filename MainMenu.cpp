@@ -15,7 +15,7 @@ void MainMenu::Draw()
 	//start button
 	if (GuiButtonEx({ float(WindowManager::GetWidthHalf()), float(WindowManager::GetHeight() / 5), 400, 80 }, "START", ButtonAli::CENTER))
 	{
-		menuManager_changeMenu(Menus::NO_CHANGE);
+		menuManager_changeMenu(Menus::SELECT_STAGE);
 	}
 
 

@@ -28,6 +28,36 @@
     <Filter Include="Source Files\Buttons">
       <UniqueIdentifier>{3c92f14c-dee9-4400-b3c3-e9cbad33f0a1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{89ce753f-b201-4e5b-9f6a-afe6d8ef0d74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core">
+      <UniqueIdentifier>{09eeb266-fffe-460b-b098-cd44f4274b2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\GameManager">
+      <UniqueIdentifier>{37cd5294-b33c-49b5-b13d-fd14c0e35d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\GameManager\GameStates">
+      <UniqueIdentifier>{ffc78532-67bf-4bc6-9c97-0be86d52881f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\GameManager">
+      <UniqueIdentifier>{2d08988c-8713-41fd-8105-b86b8301b5fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\GameManager\Game States">
+      <UniqueIdentifier>{8dc7220c-ba61-4f70-8a8f-27c83a10fbc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\Systems">
+      <UniqueIdentifier>{327ee9c9-a8a2-4660-80c5-08c72d656187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\Systems">
+      <UniqueIdentifier>{638c276b-93e2-4281-8691-a649ab3e7dce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Core\InGame">
+      <UniqueIdentifier>{d05fb06d-54e7-4dc3-8fb8-a01744e47044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Core\GameManager\InGame">
+      <UniqueIdentifier>{ea9b88f5-3cb0-4978-95cb-1aa299739c4f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Program.cpp">
@@ -35,9 +65,6 @@
     </ClCompile>
     <ClCompile Include="MenuManager.cpp">
       <Filter>Source Files\Menu</Filter>
-    </ClCompile>
-    <ClCompile Include="WindowManager.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SettingsMenu.cpp">
       <Filter>Source Files\Menu</Filter>
@@ -48,14 +75,38 @@
     <ClCompile Include="GuiButtonEx.cpp">
       <Filter>Source Files\Buttons</Filter>
     </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="MenuSceneBase.cpp">
       <Filter>Source Files\Menu</Filter>
     </ClCompile>
-    <ClCompile Include="AudioManager.cpp">
+    <ClCompile Include="Sprite.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>Source Files\Core\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStateMachine.cpp">
+      <Filter>Source Files\Core\GameManager</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>Source Files\Core\GameManager\Game States</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameState.cpp">
+      <Filter>Source Files\Core\GameManager\Game States</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectStageMenu.cpp">
+      <Filter>Source Files\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="AssetManager.cpp">
+      <Filter>Source Files\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.cpp">
+      <Filter>Source Files\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowManager.cpp">
+      <Filter>Source Files\Core\Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="MapSystem.cpp">
+      <Filter>Source Files\Core\InGame</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +115,6 @@
     </ClInclude>
     <ClInclude Include="IGameObject.h">
       <Filter>Interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="WindowManager.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MainMenu.h">
       <Filter>Header Files\Menu</Filter>
@@ -77,17 +125,53 @@
     <ClInclude Include="GuiButtonEx.h">
       <Filter>Header Files\Buttons</Filter>
     </ClInclude>
-    <ClInclude Include="Menus.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="MenuSceneBase.h">
       <Filter>Header Files\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="AudioManager.h">
+    <ClInclude Include="Sprite.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IState.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>Header Files\Core\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStateMachine.h">
+      <Filter>Header Files\Core\GameManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Menus.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>Header Files\Core\GameManager\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameState.h">
+      <Filter>Header Files\Core\GameManager\GameStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectStageMenu.h">
+      <Filter>Header Files\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="AssetManager.h">
+      <Filter>Header Files\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.h">
+      <Filter>Header Files\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowManager.h">
+      <Filter>Header Files\Core\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="MapSystem.h">
+      <Filter>Header Files\Core\GameManager\InGame</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="External\json.hpp">
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

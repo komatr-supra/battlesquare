@@ -1,29 +1,41 @@
 #include "GameManager.h"
+#include "MainMenuState.h"
+#include "SelectStageState.h"
+#include "InGameState.h"
 
 GameManager::GameManager() :
 	close{false}
 {
-	//instantiate provide exit logic to menu manager
-	menuManager = new MenuManager([this]() {this->SetCloseGame();});
+	
+	
+#pragma region STATE MACHINE
+	//create state machine
+	stateMachine = new GameStateMachine();
+	//create states
+	inGameState = new InGameState();
+	mainMenuState = new MainMenuState([this]() {this->stateMachine->ChangeState(inGameState);}, close);
+	
+	
+	stateMachine->ChangeState(mainMenuState);
+	
+
+#pragma endregion
+
 }
 
 GameManager::~GameManager()
 {
-	delete menuManager;
+	delete stateMachine;
 }
 
 void GameManager::Update(float deltaTime)
 {
-	//draw menu
-	menuManager->Draw(deltaTime);
+	stateMachine->Update(deltaTime);
+	
 }
+
 //for break the main game loop
 bool GameManager::IsExitRequired() const
 {
 	return close;
-}
-//method for exit game(provided to others) - this will be used to quit the game.
-void GameManager::SetCloseGame()
-{
-	close = true;
 }
